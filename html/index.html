@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <title>Build a bed</title>
   </head>
   <body>
@@ -66,20 +72,31 @@
         </div>
       </div>
     </nav>
-    <!-- End Navbar here-->
     <!-- Header -->
     <header
       class="bg-image"
-      style="background-image: url('https://imgur.com/a/nptjFqB')"
+      style="
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKgAAACUCAMAAAAwLZJQAAAAaVBMVEX///81NTUoKCguLi4hISHx8fG8vLyzs7Nqamr4+PiAgIDp6en8/PxOTk4rKytUVFQAAACPj4+Hh4dZWVnKysqfn59ISEh4eHjCwsJgYGCXl5fU1NTj4+NxcXESEhJlZWU8PDwaGhqoqKh4p489AAADZ0lEQVR4nO2ai3KrIBBAFVDUEOIzPlCj+f+PvKBJm7T2Nirozdw9085ksgOe7lZxUcsCAAAAAAAAAAAAAAAAAAAAAAAAfoANv4wtHbkRmx1oJdJTUNd16WH+2HoYKBYVYwF+QhBHbTB/ZNPKgaTcqiaHoy1B5fyRCVcjj45+p0nWip42Fr3MH7mTqO/MhO0ianfeXJrO3kPUxrOx9xFdCoiCKIiCKIjeD4k5eoLjTx2MfoptL4q6JngmQXcblOTPoaZDe4miRjj+MwdKxhihhy8hRzRoH1GUTwXdscLFt4DsBhu+iyipp4J+Lk1x7lsTXaDo9xDF3XQ0U6LXyV6V7XKbh0/T0asSpdOxM95D9DgdvfaE9P+U6OmhvA+FLnJJaj2G7lE2iOJtRXF/fvyOMaYuQU/ILx53GuTHrsebZvRMkJ3k2eDnH0RauDSrInlN97xLWSaSsrx4nrziR1VG3SIVh1G5yhObkO36+qQqap85qVsFTXk8d/i2XHKO1Y9sjvjw8fal3Z2PZRNnrnCYXxdVsokoUyV00gi3YdgT/tGx/R3lTvowbO1KbJVPZjk0QeQlvwljwhPqbLMjKErEl1mOcH4RG2gyGi5M5kNaQ2o4pfIkr/q1moo+Y4bLX6HfLV4Ak8ys6LXV4ikJf1hl9SDOujxt+6zOKENZ9XM9hR9AgW/GU66BbqjPUxY/NZVRdlx9YXqEL9hbf42i1+kpe5nUUO3zVQvSd/iCB0CvUK/cIPkGPk22h6spNCdUkv5+1PmwqNft2WcmRH1P40V0BDW+AVFnbCEx0QEa5zLSPdVDEnBSUQ3E41/dLXhC/StCVZ7konA1kBYnZcpN3EGnap+OOBkZureVkGuqlmNk4rQvpCiKrJjoOI1INGxGECOivZw40yZqlcZEiV7RC38TUbX//Bai+buIBu8iGr+LaERMibYYtzpFW8x7E6Li4nkXl91FOUJfHtu9AL/vWklRKufzTCyhbNxBvom2S5f89iY67FCbuMuzbq8q3kTDpZOEd1HLWLM8zOt/ii57K/ND1PCLhFozapL/RpRtIyr/seJwaHqWZ3QcHunU+o5MQx0FQRDHdMnJpM5HKgfHcVSbft6gbXrDpbeG8q85Drtv3m/0njMAAAAAAAAAAAAAAAAAAAAAAABghD+KtkItyaWAIwAAAABJRU5ErkJggg==');
+      "
     ></header>
     <!-- Main -->
+
+    <div class="container mt-5">
+      <h2 class="mb-4">Our Mattress Manufacturers</h2>
+      <div id="manufacturer-list" class="row">
+        <!-- Airtable data will load here -->
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer id="footer">
       <div class="container pt-5 mt-5">
         <div class="row gx-lg-5">
           <div class="col-lg-6 mb-2">
-            <img src="images/logo.png" alt="" />
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKgAAACUCAMAAAAwLZJQAAAAaVBMVEX///81NTUoKCguLi4hISHx8fG8vLyzs7Nqamr4+PiAgIDp6en8/PxOTk4rKytUVFQAAACPj4+Hh4dZWVnKysqfn59ISEh4eHjCwsJgYGCXl5fU1NTj4+NxcXESEhJlZWU8PDwaGhqoqKh4p489AAADZ0lEQVR4nO2ai3KrIBBAFVDUEOIzPlCj+f+PvKBJm7T2Nirozdw9085ksgOe7lZxUcsCAAAAAAAAAAAAAAAAAAAAAAAAfoANv4wtHbkRmx1oJdJTUNd16WH+2HoYKBYVYwF+QhBHbTB/ZNPKgaTcqiaHoy1B5fyRCVcjj45+p0nWip42Fr3MH7mTqO/MhO0ianfeXJrO3kPUxrOx9xFdCoiCKIiCKIjeD4k5eoLjTx2MfoptL4q6JngmQXcblOTPoaZDe4miRjj+MwdKxhihhy8hRzRoH1GUTwXdscLFt4DsBhu+iyipp4J+Lk1x7lsTXaDo9xDF3XQ0U6LXyV6V7XKbh0/T0asSpdOxM95D9DgdvfaE9P+U6OmhvA+FLnJJaj2G7lE2iOJtRXF/fvyOMaYuQU/ILx53GuTHrsebZvRMkJ3k2eDnH0RauDSrInlN97xLWSaSsrx4nrziR1VG3SIVh1G5yhObkO36+qQqap85qVsFTXk8d/i2XHKO1Y9sjvjw8fal3Z2PZRNnrnCYXxdVsokoUyV00gi3YdgT/tGx/R3lTvowbO1KbJVPZjk0QeQlvwljwhPqbLMjKErEl1mOcH4RG2gyGi5M5kNaQ2o4pfIkr/q1moo+Y4bLX6HfLV4Ak8ys6LXV4ikJf1hl9SDOujxt+6zOKENZ9XM9hR9AgW/GU66BbqjPUxY/NZVRdlx9YXqEL9hbf42i1+kpe5nUUO3zVQvSd/iCB0CvUK/cIPkGPk22h6spNCdUkv5+1PmwqNft2WcmRH1P40V0BDW+AVFnbCEx0QEa5zLSPdVDEnBSUQ3E41/dLXhC/StCVZ7konA1kBYnZcpN3EGnap+OOBkZureVkGuqlmNk4rQvpCiKrJjoOI1INGxGECOivZw40yZqlcZEiV7RC38TUbX//Bai+buIBu8iGr+LaERMibYYtzpFW8x7E6Li4nkXl91FOUJfHtu9AL/vWklRKufzTCyhbNxBvom2S5f89iY67FCbuMuzbq8q3kTDpZOEd1HLWLM8zOt/ii57K/ND1PCLhFozapL/RpRtIyr/seJwaHqWZ3QcHunU+o5MQx0FQRDHdMnJpM5HKgfHcVSbft6gbXrDpbeG8q85Drtv3m/0njMAAAAAAAAAAAAAAAAAAAAAAABghD+KtkItyaWAIwAAAABJRU5ErkJggg=="
+              alt=""
+            />
             <p class="footer-text mt-3">
               Quit the bed sweats and sleepless nights, invest in your health
               and Build A Bed!
@@ -139,5 +156,19 @@
         <!-- Copyright -->
       </a>
     </footer>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/your_kit_id.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoG6VhVUG/2Wv+Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdkn"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Fetch data -->
   </body>
 </html>
