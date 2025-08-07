@@ -2,3 +2,7 @@
   transform: scale(1.02);
   transition: 0.3s;
 }
+
+.custom {
+  background-color: #2b5b9b;
+}
